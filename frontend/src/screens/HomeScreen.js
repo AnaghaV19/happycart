@@ -2,6 +2,7 @@ import { useEffect, useReducer, useState } from "react";
 import { Link } from "react-router-dom";
 //import data from "../data";
 import axios from 'axios';
+import logger from 'use-reducer-logger';
 const reducer = (state, action) => {
     switch(action.type){
         case 'FETCH_REQUEST':
@@ -17,7 +18,7 @@ const reducer = (state, action) => {
 
 function HomeScreen () {
 
-    const [{loading, error, products},dispatch]= useReducer(reducer,{
+    const [{loading, error, products},dispatch]= useReducer(logger(reducer),{
         products:[],
         loading:true,
         error: '',
@@ -42,7 +43,12 @@ function HomeScreen () {
     return <div>
          <h1> Available products</h1>
         <div className="products">
-        {products.map((product) => (
+            {loading ? (
+                <div>Loading....</div>
+            ):error ? (
+                <div>{error}</div>
+            ):(
+            products.map((product) => (
           <div className="product" key={product.slug}>
             <Link to={`/product/${product.slug}`}>
             <img src={product.image} alt={product.name} />
@@ -55,7 +61,7 @@ function HomeScreen () {
             <button>Add to cart</button>
             </div>
           </div >
-        ))}
+        )))}
         </div>
     </div>
 }
