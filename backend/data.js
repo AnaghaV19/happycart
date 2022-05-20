@@ -1,6 +1,7 @@
 const data = {
   products: [
     {
+      _id: '1',
       name: 'Chair',
       slug: 'chair',
       cateogry: 'Furnitures',
@@ -13,6 +14,7 @@ const data = {
       description: 'Very comfortable chair',
     },
     {
+      _id: '2',
       name: 'Dining Table',
       slug: 'Dining Table',
       cateogry: 'Furnitures',
@@ -25,6 +27,7 @@ const data = {
       description: '6 Seater Dining table American Walnut Finish',
     },
     {
+      _id: '3',
       name: 'Watch',
       slug: 'watch',
       cateogry: 'Watches',
@@ -37,6 +40,7 @@ const data = {
       description: 'Petite Melorse watch + Classic Bracelet',
     },
     {
+      _id: '4',
       name: 'Shoes',
       slug: 'Shoes',
       cateogry: 'Sports shoes',
@@ -49,6 +53,7 @@ const data = {
       description: 'Very comfy and attractive shoes',
     },
     {
+      _id: '5',
       name: 'Light Lamp',
       slug: 'Light Lamp',
       cateogry: 'Household items',
@@ -61,6 +66,7 @@ const data = {
       description: 'White light lamp',
     },
     {
+      _id: '6',
       name: 'Coffee Mugs',
       slug: 'Coffee Mugs',
       cateogry: 'Crockeries',
