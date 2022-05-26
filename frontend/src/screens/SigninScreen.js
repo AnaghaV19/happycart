@@ -44,7 +44,7 @@ const { userInfo } = state;
             <Helmet>
                 <title>Sign In</title>
             </Helmet>
-            <h1 className="my-3">Sign In</h1>
+            <h1 className="my-3">Sign in</h1>
             <Form onSubmit={submitHandler}>
                 <Form.Group className="mb-3" controlId="email">
                     <Form.Label>Email</Form.Label>
@@ -55,7 +55,7 @@ const { userInfo } = state;
                     <Form.Control type="password"  required onChange={(e) => setPassword(e.target.value) }/>
                 </Form.Group>
                 <div className="mb-3">
-                    <Button type="submit"> Sign In</Button>
+                    <Button type="submit"> Sign in</Button>
                 </div>
                 <div className="mb-3">
                     New Customer?{''}
