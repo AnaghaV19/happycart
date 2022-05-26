@@ -51,7 +51,7 @@ function HomeScreen () {
         <Helmet> 
             <title>Happy Cart</title>
         </Helmet>
-         <h1> Available products</h1>
+         <h3> Available products</h3>
         <div className="products">
             { loading ? (
                 <LoadingBox />
